@@ -36,11 +36,11 @@
 截图
 -----------
 
-#### Index
-![](https://raw.githubusercontent.com/xuyuanfang/so.whu.link/master/img/v1.png)
+#### Index_part1
+![](https://raw.githubusercontent.com/xuyuanfang/so.whu.link/master/img/s1.png)
 
-#### sumbit a task
-![](https://raw.githubusercontent.com/xuyuanfang/so.whu.link/master/img/v2.png)
+#### Index_part2
+![](https://raw.githubusercontent.com/xuyuanfang/so.whu.link/master/img/s2.png)
 
 ## 更新日志
 暂无更新
