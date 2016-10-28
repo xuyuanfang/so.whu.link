@@ -1,4 +1,4 @@
-![](http://so.whu.link/img/logo.png)
+![](https://raw.githubusercontent.com/xuyuanfang/so.whu.link/master/img/logo.png)
 
 多搜索引擎手机导航页面
 =========================
@@ -37,10 +37,10 @@
 -----------
 
 #### Index
-![](http://so.whu.link/img/v2-c1640dd4bd2eab4d85f533a3a7ad970a_r.png)
+![](https://raw.githubusercontent.com/xuyuanfang/so.whu.link/master/img/v1.png)
 
 #### sumbit a task
-![](http://so.whu.link/img/v2-505dbe9424b65ae38e0a802a76fffd88_r.png)
+![](https://raw.githubusercontent.com/xuyuanfang/so.whu.link/master/img/v2.png)
 
 ## 更新日志
 暂无更新
