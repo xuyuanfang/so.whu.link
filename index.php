@@ -70,7 +70,7 @@ window.open ("http://m.youdao.com/dict?le=eng&q="+str+"", "newwindow");
 
 <!--<h1>Google</h1> -->
 <div align="center"><img src=img/google.png height="24" width=auto ></div>
-<form name="searchForm3" id="searchForm3" method="get" action="https://220.255.2.153/search" target="_blank"> 
+<form name="searchForm3" id="searchForm3" method="get" action="https://www.google.com.hk/search" target="_blank"> 
 <div class="field" id="searchform3">
   <input type="text" id="searchterm3" name="q" placeholder="需翻墙或修改本机HOST才能使用！" />
   <button onclick="searchForm3.submit()" type="button" id="search">Find!</button>
