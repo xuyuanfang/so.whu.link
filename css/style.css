@@ -3,45 +3,99 @@
 * {
     margin:0;
     padding:0;
-    font:8pt Arial;
+    font:10pt Arial;
 }
 
-body {
-  background-color:#FFEFDB;/*#34495e*/
-}
-
-.field {
+.searchbox {
   display:flex;
   position:realtive;
-  margin:2em;
+  margin:1em;
   width:auto;
   flex-direction:row;
-  box-shadow:
-   1px 1px 0 rgb(22, 160, 133),
-   2px 2px 0 rgb(22, 160, 133),
-   3px 3px 0 rgb(22, 160, 133),
-   4px 4px 0 rgb(22, 160, 133),
-   5px 5px 0 rgb(22, 160, 133),
-   6px 6px 0 rgb(22, 160, 133),
-   7px 7px 0 rgb(22, 160, 133)
-  ;
 }
 
-.field>input[type=text],
-.field>button {
+.searchbox>input[type=text],
+.searchbox>button {
   display:block;
   font:1.2em 'Montserrat Alternates';
 }
 
-.field>input[type=text] {
+.searchbox>input[type=text] {
   flex:1;
   padding:0.6em;
   border:0.2em solid rgb(26, 188, 156);
 }
 
-.field>button {
+.searchbox>button {
   padding:0.6em 0.8em;
   background-color:rgb(26, 188, 156);
   color:white;
   border:none;
+}
+
+p {padding:1em;color:#1ABC9C;}
+
+
+
+/* =================
+   Container Styling */
+.container {
+  position: relative;
+  background: white;
+  margin:1em;
+  padding: 0em;
+  border-radius: 0 0 8px 8px;
+}
+
+/* ===========
+   Tab Styling */
+.tab-group {
+  position: relative;
+  border: 1px solid #eee;
+  margin-top: 2em;
+  border-radius: 0 0 5px 5px;
+}
+.tab-group section {
+  opacity: 0;
+  height: 0;
+  padding: 0 1em;
+  overflow: hidden;
+  transition: opacity 0.4s ease, height 0.4s ease;
+}
+.tab-group section.active {
+  opacity: 1;
+  height: auto;
+  overflow: visible;
+}
+
+.tab-nav {
+  list-style: none;
+  margin: -2.5em -1px 0 0;
+  padding: 0;
+  height: 2.5em;
+  overflow: hidden;
+}
+.tab-nav li {
+  display: inline;
+}
+.tab-nav li a {
+  top: 1px;
+  position: relative;
+  display: block;
+  float: left;
+  border-radius: 10px 10px 0 0;
+  background: #eee;
+  line-height: 2em;
+  padding: 0 0.81em;
+  text-decoration: none;
+  color: grey;
+  margin-top: .5em;
+  margin-right: 1px;
+  transition: background .2s ease, line-height .2s ease, margin .2s ease;
+}
+.tab-nav li.active a {
+  background: #1ABC9C;
+  color: white;
+  line-height: 2.5em;
+  margin-top: 0;
 }

@@ -1,82 +1,329 @@
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <title>WHU搜索导航——只为更简洁</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0" /> 
 <link href="css/style.css" rel="stylesheet" type="text/css" />
-<script class="cssdeck" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-tab.js"></script>
 </head>
 
-<body>
+<body background="img/background.jpg">
 <div align="center"><img src=img/logo.png height="50" width=auto ></div>
-<!--<h1>百度</h1> -->
-<div align="center"><img src=img/baidu.png height="24" width=auto ></div>
-<form name="searchForm1" id="searchForm1" method="get" action="https://www.baidu.com/s" target="_blank"> 
-<div class="field" id="searchform1">
-  <input type="text" id="searchterm1" name="wd" placeholder="使用百度搜索引擎搜索" />
-  <button onclick="searchForm1.submit()" type="button" id="search">Find!</button>
-</div>
-</form>
 
-<!--<h1>Bing</h1> -->
-<div align="center"><img src=img/bing.png height="24" width=auto ></div>
-<form name="searchForm2" id="searchForm2" method="get" action="http://cn.bing.com/search" target="_blank"> 
-<div class="field" id="searchform2">
-  <input type="text" id="searchterm2" name="q" placeholder="使用必应搜索引擎搜索" />
-  <button onclick="searchForm2.submit()" type="button" id="search">Find!</button>
-</div>
-</form>
-
-<!--<h1>sogou</h1> -->
-<div align="center"><img src=img/sogou.png height="24" width=auto ></div>
-<form name="searchForm4" id="searchForm4" method="get" action="https://www.sogou.com/web" target="_blank"> 
-<div class="field" id="searchform4">
-  <input type="text" id="searchterm4" name="query" placeholder="使用搜狗搜索引擎搜索" />
-  <button onclick="searchForm4.submit()" type="button" id="search">Find!</button>
-</div>
-</form>
-
-<!--<h1>360</h1> -->
-<div align="center"><img src=img/360.png height="24" width=auto ></div>
-<form name="searchForm6" id="searchForm6" method="get" action="https://www.so.com/s" target="_blank"> 
-<div class="field" id="searchform6">
-  <input type="text" id="searchterm6" name="q" placeholder="使用360搜索引擎搜索" />
-  <button onclick="searchForm6.submit()" type="button" id="search">Find!</button>
-</div>
-</form>
-
-<!--<h1>有道</h1> -->
-<div align="center"><img src=img/youdao.png height="24" width=auto ></div>
 <script>
-function load(){
-var str = searchForm5.q.value;
+index = 0;
+function read_input(){
+var str = searchForm.input.value;
 //alert(str);
 return str;
 }
 
-function openWin()
+function openWin(name)
 {
-var str = load();
-window.open ("http://m.youdao.com/dict?le=eng&q="+str+"", "newwindow");
+var str = read_input();
+//alert(name);
+//web
+if (name == "baidu_web"){
+	var so = "https://www.baidu.com/s?wd=";
 }
-//http://www.youdao.com/w/eng/
+else if (name == "bing_web"){
+	var so = "http://cn.bing.com/search?q=";
+}
+else if(name == "sogou_web"){
+	var so = "https://www.sogou.com/web?query=";
+}
+else if(name == "360_web"){
+	var so = "https://www.so.com/s?q=";
+}
+else if(name == "youdao_web"){
+	var so = "http://m.youdao.com/dict?le=eng&q=";
+}
+else if(name == "google_web"){
+	var so = "https://www.google.com.hk/search?q=";
+}
+
+//img
+else if(name == "baidu_img"){
+	var so = "http://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=index&fr=&hs=4&sf=1&fmq=&pv=&ic=0&nc=1&z=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&word=";
+}
+else if (name == "bing_img"){
+	var so = "http://cn.bing.com/images/search?q=";
+}
+else if(name == "sogou_img"){
+	var so = "http://pic.sogou.com/pics?query=";
+}
+else if(name == "360_img"){
+	var so = "http://image.so.com/i?q=";
+}
+else if(name == "google_img"){
+	var so = "https://www.google.com.hk/search?newwindow=1&safe=strict&site=imghp&tbm=isch&q=";
+}
+//AQ
+else if(name == "baidu_aq"){
+	var so = "https://zhidao.baidu.com/search?ct=17&pn=0&tn=ikaslist&rn=10&lm=0&ie=utf-8&word=";
+}
+else if(name == "sogou_aq"){
+	var so = "http://wenwen.sogou.com/s/?w=";
+}
+else if(name == "360_aq"){
+	var so = "http://wenda.so.com/search/?q=";
+}
+else if(name == "sina_aq"){
+	var so = "http://iask.sina.com.cn/search?searchWord=1&record=";
+}
+else if(name == "zhihu_aq"){
+	var so = "https://www.zhihu.com/search?type=content&q=";
+}
+
+//translate
+else if(name == "baidu_translate"){
+	var so = "http://fanyi.baidu.com/#en/zh/";
+}else if (name == "bing_translate"){
+	var so = "http://cn.bing.com/dict/search?intlF=0&q=";
+}
+else if(name == "youdao_translate"){
+	var so = "http://m.youdao.com/dict?le=eng&q=";
+}
+else if(name == "jinshan_translate"){
+	var so = "http://www.iciba.com/";
+}
+else if(name == "google_translate"){
+	var so = "https://translate.google.com.hk/?hl=zh-CN&tab=wT#auto/zh-CN/";
+}
+
+//scholar
+else if(name == "baidu_scholar"){
+	var so = "http://xueshu.baidu.com/s?wd=";
+}
+else if (name == "bing_scholar"){
+	var so = "http://cn.bing.com/academic/search?intlF=0&q=";
+}
+else if(name == "sogou_scholar"){
+	var so = "http://scholar.sogou.com/xueshu?ie=utf-8&query=";
+}
+else if(name == "360_scholar"){
+	var so = "http://xueshu.so.com/s?ie=utf-8&shb=1&src=360sou_home&q=";
+}
+else if(name == "youdao_scholar"){
+	var so = "http://m.youdao.com/dict?le=eng&q=";
+}
+else if(name == "google_scholar"){
+	var so = "https://scholar.google.com.hk/scholar?q=";
+}
+
+//map
+else if(name == "baidu_map"){
+	str = ""
+	var so = "http://map.baidu.com";
+}
+else if(name == "gaode_map"){
+	str = ""
+	var so = "http://ditu.amap.com";
+}
+else if(name == "sogou_map"){
+	str = ""
+	var so = "http://map.sogou.com";
+}
+else if(name == "360_map"){
+	str = ""
+	var so = "http://ditu.so.com";
+}
+else if(name == "tencent__map"){
+	str = ""
+	var so = "http://map.qq.com";
+}
+else if (name == "bing_map"){
+	str = ""
+	var so = "http://cn.bing.com/ditu";
+}
+else if(name == "google_map"){
+	str = ""
+	var so = "http://www.google.cn/maps";
+}
+else{
+	var so = "https://www.baidu.com/s?wd=";
+}
+
+var url = so + str + "";
+window.open (url, "newwindow");
+}
 </script>
-<form name="searchForm5"> 
-<div class="field" id="searchform5">
-  <input type="text" id="searchterm5" name="q" placeholder="使用有道搜索引擎搜索" />
-  <button href="JavaScript:void(0)" onclick= "openWin()" type="button" id="search">Find!</button>
+
+<script>
+document.onkeydown = function(){
+if (event.keyCode==13) { 
+//alert("ok"); 
+openWin('baidu'); 
+} 
+}
+</script>
+
+<form name="searchForm" id="searchForm" method="get"> 
+<div class="searchbox" id="searchform">
+	<input type="text" value="" name="input" id="searchform" class="one" placeholder="请输入您想搜索的内容" />
 </div>
 </form>
+</br>
+<div class="htmleaf-container">
+	<div class="container">
+	  <div class="tab-group">
+		<section id="tab1" title="网页">
+			<center>
+			<table border="0" cellspacing="30">
+			<tr>
+				<th><!--<h1>百度</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('baidu_web')" align="left"><img src=img/baidu_web.png height="22" width=auto ></div></th>
+				<th><!--<h1>Bing</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('bing_web')" align="left"><img src=img/bing.png height="22" width=auto ></div></th>
+			  </tr>
+			<tr>
+				<th><!--<h1>sogou</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('sogou_web')" align="left"><img src=img/sogou_web.png height="22" width=auto ></div></th>
+				<th><!--<h1>360</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('360_web')" align="left"><img src=img/360_web.png height="22" width=auto ></div></th>
+			</tr>
+			<tr>
+				<th><!--<h1>Google</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('google_web')" align="left"><img src=img/google.png height="22" width=auto ></div></th>
+			</tr>
+			</table>
+			</center>
+		</section>
+		<section id="tab2" title="图片">
+			<center>
+			<table border="0" cellspacing="30">
+			<tr>
+				<th><!--<h1>百度</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('baidu_img')" align="left"><img src=img/baidu_img.png height="22" width=auto ></div></th>
+				<th><!--<h1>Bing</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('bing_img')" align="left"><img src=img/bing.png height="22" width=auto ></div></th>
+			  </tr>
+			<tr>
+				<th><!--<h1>sogou</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('sogou_img')" align="left"><img src=img/sogou_img.png height="22" width=auto ></div></th>
+				<th><!--<h1>360</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('360_img')" align="left"><img src=img/360_img.png height="22" width=auto ></div></th>
+			</tr>
+			<tr>
+				<th><!--<h1>Google</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('google_img')" align="left"><img src=img/google.png height="22" width=auto ></div></th>
+			</tr>
+			</table>
+			</center>
+		</section>
+		<section id="tab3" title="问答">
+			<center>
+			<table border="0" cellspacing="30">
+			<tr>
+				<th><!--<h1>百度</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('baidu_aq')" align="left"><img src=img/baidu_aq.png height="22" width=auto ></div></th>
+				<th><!--<h1>sogou</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('sogou_aq')" align="left"><img src=img/sogou_aq.png height="22" width=auto ></div></th>
+			  </tr>
+			<tr>
+				<th><!--<h1>360</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('360_aq')" align="left"><img src=img/360_aq.png height="22" width=auto ></div></th>
+				<th><!--<h1>新浪</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('youdao_aq')" align="left"><img src=img/sina_aq.png height="22" width=auto ></div></th>
+			</tr>
+			<tr>
+				<th><!--<h1>知乎</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('youdao_aq')" align="left"><img src=img/zhihu_aq.png height="22" width=auto ></div></th>
+			</tr>
+			</table>
+			</center>
 
-<!--<h1>Google</h1> -->
-<div align="center"><img src=img/google.png height="24" width=auto ></div>
-<form name="searchForm3" id="searchForm3" method="get" action="https://www.google.com.hk/search" target="_blank"> 
-<div class="field" id="searchform3">
-  <input type="text" id="searchterm3" name="q" placeholder="需翻墙或修改本机HOST才能使用！" />
-  <button onclick="searchForm3.submit()" type="button" id="search">Find!</button>
+		</section>
+		<section id="tab4" title="翻译">
+			<center>
+			<table border="0" cellspacing="30">
+			<tr>
+				<th><!--<h1>百度</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('baidu_translate')" align="left"><img src=img/baidu_translate.png height="22" width=auto ></div></th>
+				<th><!--<h1>Bing</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('bing_translate')" align="left"><img src=img/bing.png height="22" width=auto ></div></th>
+			  </tr>
+			<tr>
+				<th><!--<h1>有道</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('youdao_translate')" align="left"><img src=img/youdao.png height="22" width=auto ></div></th>
+				<th><!--<h1>金山</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('jinshan_translate')" align="left"><img src=img/jinshan.png height="22" width=auto ></div></th>
+			</tr>
+			<tr>
+
+				<th><!--<h1>Google</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('google_translate')" align="left"><img src=img/google.png height="22" width=auto ></div></th>
+			</tr>
+			</table>
+			</center>
+
+		</section>
+		<section id="tab5" title="学术">
+			<center>
+			<table border="0" cellspacing="30">
+			<tr>
+				<th><!--<h1>百度</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('baidu_scholar')" align="left"><img src=img/baidu_scholar.png height="22" width=auto ></div></th>
+				<th><!--<h1>Bing</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('bing_scholar')" align="left"><img src=img/bing.png height="22" width=auto ></div></th>
+			  </tr>
+			<tr>
+				<th><!--<h1>sogou</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('sogou_scholar')" align="left"><img src=img/sogou_scholar.png height="22" width=auto ></div></th>
+				<th><!--<h1>360</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('360_scholar')" align="left"><img src=img/360_scholar.png height="22" width=auto ></div></th>
+			</tr>
+			<tr>
+				<th><!--<h1>Google</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('google_scholar')" align="left"><img src=img/google.png height="22" width=auto ></div></th>
+			</tr>
+			</table>
+			</center>
+			
+		</section>
+		<section id="tab6" title="地图">
+			<center>
+			<table border="0" cellspacing="30">
+			<tr>
+				<th><!--<h1>百度</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('baidu_map')" align="left"><img src=img/baidu_map.png height="22" width=auto ></div></th>
+				<th><!--<h1>高德</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('gaode_map')" align="left"><img src=img/gaode_map.png height="22" width=auto ></div></th>
+			  </tr>
+			<tr>
+				<th><!--<h1>sogou</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('sogou_map')" align="left"><img src=img/sogou_map.png height="22" width=auto ></div></th>
+				<th><!--<h1>腾讯</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('tencent_map')" align="left"><img src=img/tencent_map.png height="22" width=auto ></div></th>
+			</tr>
+			<tr>
+				<th><!--<h1>360</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('360_map')" align="left"><img src=img/360_map.png height="22" width=auto ></div></th>
+				<th><!--<h1>Bing</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('bing_map')" align="left"><img src=img/bing.png height="22" width=auto ></div></th>
+			</tr>
+			<tr>
+				<th><!--<h1>Google</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('google_map')" align="left"><img src=img/google.png height="22" width=auto ></div></th>
+			</tr>
+			</table>
+			</center>
+			<p>注意：地图无法从上方搜索框搜索，请直接点击logo进入地图网页地图查找！</p>
+		</section>
+	  </div>
+	</div>
 </div>
-</form>
 
-<center><p>Copyright©2016 so.whu.link 鄂ICP备14003738号 版权所有 All Rights Reserved Powered By <a href="http://blog.xyf.im" target="_blank">WHUER</a></p></center>
+<script type="text/javascript">
+	$(function(){
+		// Calling the plugin
+		$('.tab-group').tabify();
+	})
+</script>
+
+<p>使用方法：在上方搜索框输入您想搜索的内容，然后点击下方您想要使用的搜索引擎的logo即可搜索,输入内容后直接回车默认使用百度搜索网页</p>
+<center><p>Copyright©2016 so.whu.link 鄂ICP备14003738号 版权所有 All Rights Reserved Powered By <a href="http://blog.xyf.im" target="_blank">WHUER</a> 项目地址<a href="https://github.com/xuyuanfang/so.whu.link" target="_blank">Github</a></p></center>
 </body>
 </html>

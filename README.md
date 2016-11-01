@@ -1,4 +1,4 @@
-![so_whu_logo](https://raw.githubusercontent.com/xuyuanfang/so.whu.link/master/img/logo.png)
+![so_whu_logo](/img/logo.png)
 
 多搜索引擎手机导航页面
 =========================
@@ -11,33 +11,41 @@
 * Bing
 * 搜狗
 * 360
+* 知乎
+* 腾讯
+* 金山词霸
 * 有道
 * Google
+*
 
 环境要求
 ------------
-* php
+* php（不是必须的，我是需要加入php版的统计代码，不需要统计的同学直接将主页后缀改为html即可）
 
 安装
 ------------
-将文件直接放置在根目录即可
+将文件直接放置在网站根目录即可
 
 未来会更新的地方
 ----------
-- 增加“Enter”发起搜索的支持 
-- 增强对电脑版的友好程度
+- 单独设计电脑版UI
 - 支持更多搜索引擎
+- 可能增加个性化设置（从本人的能力来看，暂时不太现实，哈哈）
 
 截图
 -----------
-#### Index_part1
-![Index_part1](https://raw.githubusercontent.com/xuyuanfang/so.whu.link/master/img/s1.png)
-
-#### Index_part2
-![Index_part2](https://raw.githubusercontent.com/xuyuanfang/so.whu.link/master/img/s2.png)
+#### Index
+![Index](/img/s1.png)
 
 ## 更新日志
-暂无更新
+20161102 更新 v1.0
+- 增加“Enter”发起搜索的支持 
+- 增加搜索内容分类标签 
+- 重新设计搜索页面UI
+- 支持更多搜索引擎
+
+20121029 v0.1
+- 框架预览版
 
 交流讨论
 ----------
