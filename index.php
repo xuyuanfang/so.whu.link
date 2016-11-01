@@ -46,7 +46,7 @@ else if(name == "google_web"){
 
 //img
 else if(name == "baidu_img"){
-	var so = "http://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=index&fr=&hs=4&sf=1&fmq=&pv=&ic=0&nc=1&z=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&word=";
+	var so = "http://image.baidu.com/search/wiseala?tn=wiseala&ie=utf8&from=index&fmpage=index&pos=top&active=1&word=";
 }
 else if (name == "bing_img"){
 	var so = "http://cn.bing.com/images/search?q=";
@@ -65,13 +65,13 @@ else if(name == "baidu_aq"){
 	var so = "https://zhidao.baidu.com/search?ct=17&pn=0&tn=ikaslist&rn=10&lm=0&ie=utf-8&word=";
 }
 else if(name == "sogou_aq"){
-	var so = "http://wenwen.sogou.com/s/?w=";
+	var so = "http://wenwen.m.sogou.com/ms/search.jsp?key=";
 }
 else if(name == "360_aq"){
 	var so = "http://wenda.so.com/search/?q=";
 }
 else if(name == "sina_aq"){
-	var so = "http://iask.sina.com.cn/search?searchWord=1&record=";
+	var so = "http://m.iask.sina.com.cn/search/1.html?content=";
 }
 else if(name == "zhihu_aq"){
 	var so = "https://www.zhihu.com/search?type=content&q=";
@@ -226,11 +226,11 @@ openWin('baidu');
 				<th><!--<h1>360</h1> -->
 			<div href="JavaScript:void(0)" onclick="openWin('360_aq')" align="left"><img src=img/360_aq.png height="22" width=auto ></div></th>
 				<th><!--<h1>新浪</h1> -->
-			<div href="JavaScript:void(0)" onclick="openWin('youdao_aq')" align="left"><img src=img/sina_aq.png height="22" width=auto ></div></th>
+			<div href="JavaScript:void(0)" onclick="openWin('sina_aq')" align="left"><img src=img/sina_aq.png height="22" width=auto ></div></th>
 			</tr>
 			<tr>
 				<th><!--<h1>知乎</h1> -->
-			<div href="JavaScript:void(0)" onclick="openWin('youdao_aq')" align="left"><img src=img/zhihu_aq.png height="22" width=auto ></div></th>
+			<div href="JavaScript:void(0)" onclick="openWin('zhihu_aq')" align="left"><img src=img/zhihu_aq.png height="22" width=auto ></div></th>
 			</tr>
 			</table>
 			</center>
