@@ -9,14 +9,14 @@
 <script type="text/javascript" src="js/jquery-tab.js"></script>
 </head>
 
-<body background="img/background.jpg">
+<body>
 <div align="center"><img src=img/logo.png height="50" width=auto ></div>
 
 <script>
 index = 0;
 function read_input(){
 var str = searchForm.input.value;
-//alert(str);
+//alert(str); background="img/background.jpg"
 return str;
 }
 

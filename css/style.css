@@ -6,6 +6,14 @@
     font:10pt Arial;
 }
 
+body {
+  background-color:#FFFFF0;
+}
+
+p {padding:1em;color:#1ABC9C;}
+
+/* =================
+   Searchbox Styling */
 .searchbox {
   display:flex;
   position:realtive;
@@ -32,10 +40,6 @@
   color:white;
   border:none;
 }
-
-p {padding:1em;color:#1ABC9C;}
-
-
 
 /* =================
    Container Styling */
