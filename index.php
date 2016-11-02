@@ -16,7 +16,7 @@
 index = 0;
 function read_input(){
 var str = searchForm.input.value;
-//alert(str); background="img/background.jpg"
+//alert(str);
 return str;
 }
 
@@ -43,6 +43,9 @@ else if(name == "youdao_web"){
 else if(name == "google_web"){
 	var so = "https://www.google.com.hk/search?q=";
 }
+else if(name == "google_mirror_web"){
+	var so = "https://ss.wtf/#safe=strict&q=";
+}
 
 //img
 else if(name == "baidu_img"){
@@ -60,6 +63,7 @@ else if(name == "360_img"){
 else if(name == "google_img"){
 	var so = "https://www.google.com.hk/search?newwindow=1&safe=strict&site=imghp&tbm=isch&q=";
 }
+
 //AQ
 else if(name == "baidu_aq"){
 	var so = "https://zhidao.baidu.com/search?ct=17&pn=0&tn=ikaslist&rn=10&lm=0&ie=utf-8&word=";
@@ -112,6 +116,16 @@ else if(name == "youdao_scholar"){
 else if(name == "google_scholar"){
 	var so = "https://scholar.google.com.hk/scholar?q=";
 }
+else if(name == "google_mirror_scholar"){
+	var so = "https://g.sxisa.org/scholar?hl=zh-CN&q=";
+}
+else if(name == "luojia_scholar"){
+	var so = "http://cn.whu.findplus.cn/?h=search_list&action[addexpander][]=fulltext&query=";
+}
+else if(name == "whulib_scholar"){
+	var so = "http://202.114.65.38:8080/search?xc=3&filed=wrd&app=null&base=whu01&kw=";
+}
+//whulib_pc http://opac.whu.findplus.cn/?h=search_list&query=
 
 //map
 else if(name == "baidu_map"){
@@ -186,7 +200,9 @@ openWin('baidu');
 			</tr>
 			<tr>
 				<th><!--<h1>Google</h1> -->
-			<div href="JavaScript:void(0)" onclick="openWin('google_web')" align="left"><img src=img/google.png height="22" width=auto ></div></th>
+			<div href="JavaScript:void(0)" onclick="openWin('google_web')" align="left"><img src=img/google_hk.png height="22" width=auto ></div></th>
+				<th><!--<h1>Google_mirror</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('google_mirror_web')" align="left"><img src=img/google_mirror.png height="22" width=auto ></div></th>
 			</tr>
 			</table>
 			</center>
@@ -208,7 +224,7 @@ openWin('baidu');
 			</tr>
 			<tr>
 				<th><!--<h1>Google</h1> -->
-			<div href="JavaScript:void(0)" onclick="openWin('google_img')" align="left"><img src=img/google.png height="22" width=auto ></div></th>
+			<div href="JavaScript:void(0)" onclick="openWin('google_img')" align="left"><img src=img/google_hk.png height="22" width=auto ></div></th>
 			</tr>
 			</table>
 			</center>
@@ -254,7 +270,7 @@ openWin('baidu');
 			<tr>
 
 				<th><!--<h1>Google</h1> -->
-			<div href="JavaScript:void(0)" onclick="openWin('google_translate')" align="left"><img src=img/google.png height="22" width=auto ></div></th>
+			<div href="JavaScript:void(0)" onclick="openWin('google_translate')" align="left"><img src=img/google_hk.png height="22" width=auto ></div></th>
 			</tr>
 			</table>
 			</center>
@@ -277,8 +293,16 @@ openWin('baidu');
 			</tr>
 			<tr>
 				<th><!--<h1>Google</h1> -->
-			<div href="JavaScript:void(0)" onclick="openWin('google_scholar')" align="left"><img src=img/google.png height="22" width=auto ></div></th>
+			<div href="JavaScript:void(0)" onclick="openWin('google_scholar')" align="left"><img src=img/google_hk.png height="22" width=auto ></div></th>
+				<th><!--<h1>Google_mirror</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('google_mirror_scholar')" align="left"><img src=img/google_mirror.png height="22" width=auto ></div></th>
 			</tr>
+			</tr>
+				<th><!--<h1>luojia</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('luojia_scholar')" align="left"><img src=img/luojia.png height="22" width=auto ></div></th>
+				<th><!--<h1>whulib</h1> -->
+			<div href="JavaScript:void(0)" onclick="openWin('whulib_scholar')" align="left"><img src=img/whulib.png height="22" width=auto ></div></th>
+			<tr>
 			</table>
 			</center>
 			
@@ -306,11 +330,11 @@ openWin('baidu');
 			</tr>
 			<tr>
 				<th><!--<h1>Google</h1> -->
-			<div href="JavaScript:void(0)" onclick="openWin('google_map')" align="left"><img src=img/google.png height="22" width=auto ></div></th>
+			<div href="JavaScript:void(0)" onclick="openWin('google_map')" align="left"><img src=img/google_hk.png height="22" width=auto ></div></th>
 			</tr>
 			</table>
 			</center>
-			<p>注意：地图无法从上方搜索框搜索，请直接点击logo进入地图网页地图查找！</p>
+			<p>注意：地图无法从上方搜索框搜索，请直接点击logo进入地图页面查找！</p>
 		</section>
 	  </div>
 	</div>
@@ -324,6 +348,6 @@ openWin('baidu');
 </script>
 
 <p>使用方法：在上方搜索框输入您想搜索的内容，然后点击下方您想要使用的搜索引擎的logo即可搜索,输入内容后直接回车默认使用百度搜索网页</p>
-<center><p>Copyright©2016 so.whu.link 鄂ICP备14003738号 版权所有 All Rights Reserved Powered By <a href="http://blog.xyf.im" target="_blank">WHUER</a> 项目地址<a href="https://github.com/xuyuanfang/so.whu.link" target="_blank">Github</a></p></center>
+<center><p>Copyright©2016 so.whu.link 鄂ICP备14003738号 版权所有 All Rights Reserved Powered By <a href="http://blog.xyf.im" target="_blank">WHUER</a> 本项目已在<a href="https://github.com/xuyuanfang/so.whu.link" target="_blank">Github</a>开源</p></center>
 </body>
 </html>
