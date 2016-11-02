@@ -83,10 +83,10 @@ p {padding:1em;color:#1ABC9C;}
   position: relative;
   display: block;
   float: left;
-  border-radius: 10px 10px 0 0;
+  border-radius: 5px 5px 0 0;
   background: #eee;
   line-height: 2em;
-  padding: 0 0.81em;
+  padding: 0 5.3%;
   text-decoration: none;
   color: grey;
   margin-top: .5em;
