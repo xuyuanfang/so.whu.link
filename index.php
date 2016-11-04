@@ -28,7 +28,6 @@ if(is_array($_POST)&&count($_POST)>0)//判断是否有POST参数
 <div align="center"><img src=img/logo.png height="50" width=auto ></div>
 
 <script>
-index = 0;
 function read_input(){
 var str = searchForm.input.value;
 //alert(str);
