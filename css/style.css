@@ -22,24 +22,10 @@ p {padding:1em;color:#1ABC9C;}
   flex-direction:row;
 }
 
-.searchbox>input[type=text],
-.searchbox>button {
-  display:block;
-  font:1.2em 'Montserrat Alternates';
-}
-
 .searchbox>input[type=text] {
   flex:1;
   padding:0.6em;
   border:0.2em solid rgb(26, 188, 156);
-}
-
-.searchbox>button {
-  padding:0.6em 0.8em;
-  background-color:rgb(26, 188, 156);
-  color:white;
-  border:none;
-}
 
 /* =================
    Container Styling */
