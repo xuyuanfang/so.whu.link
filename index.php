@@ -10,17 +10,16 @@
 </head>
 
 <?php
-if(is_array($_GET)&&count($_GET)>0)//判断是否有Get参数 
+if(is_array($_POST)&&count($_POST)>0)//判断是否有POST参数 
 { 
-	if(!empty($_GET['input']) || !isset($_GET["input"]))//判断所需要的参数是否存在，isset用来检测变量是否设置，返回true or false 
+	if(!empty($_POST['input']) || !isset($_POST["input"]))//判断所需要的参数是否存在，isset用来检测变量是否设置，返回true or false 
 	{ 
 		if(stripos($_SERVER["HTTP_USER_AGENT"],"firefox"))//判断浏览器是否为火狐
 		{
-			$url = 'https://www.baidu.com/s?wd='.$_GET['input'];
+			$url = 'https://www.baidu.com/s?wd='.$_POST['input'];
 			echo "<meta http-equiv='Refresh' content='0;URL=$url'>"; 
 			exit;
 		}
-
 	}
 }
 ?>
@@ -190,7 +189,7 @@ openWin('baidu');
 }
 </script>
 
-<form name="searchForm" id="searchForm" method="get" target="_blank"> 
+<form name="searchForm" id="searchForm" method="POST" target="_blank"> 
 <div class="searchbox" id="searchform">
 	<input type="text" value="" name="input" id="searchform" class="one" placeholder="请输入您想搜索的内容" />
 </div>
