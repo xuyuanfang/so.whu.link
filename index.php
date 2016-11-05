@@ -344,7 +344,7 @@ openWin('baidu');
 			</tr>
 			<tr>
 				<th><!--<h1>Google</h1> -->
-			<div href="JavaScript:void(0)" onclick="openWin('google_map')" align="left"><img src=img/google_hk.png height="22" width=auto ></div></th>
+			<div href="JavaScript:void(0)" onclick="openWin('google_map')" align="left"><img src=img/google.png height="22" width=auto ></div></th>
 			</tr>
 			</table>
 			</center>
