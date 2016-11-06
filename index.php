@@ -3,7 +3,7 @@
 <head>
 <title>WHU搜索导航——只为更简洁</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1, maximum-scale=1.0, user-scalable=no" /> 
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery-tab.js"></script>
@@ -22,7 +22,25 @@ if(is_array($_POST)&&count($_POST)>0)//判断是否有POST参数
 ?>
 
 <body>
-<div align="center"><img src=img/logo.png height="50" width=auto ></div>
+<div align="center"><a href="http://so.whu.link" title=""><img src=img/logo.png height="50" width=auto ></a></div>
+
+<?php
+//print_r($_SERVER);
+if (stripos($_SERVER["HTTP_USER_AGENT"],"safari")){
+	if (!stripos($_SERVER["HTTP_USER_AGENT"],"Chrome")){
+?>
+	<script>
+	document.onkeydown = function(){
+		if (event.keyCode==13) { 
+			//alert("ok"); 
+			openWin('baidu'); 
+		} 
+	}
+	</script>
+<?php
+}
+}
+?>
 
 <script>
 function read_input(){
@@ -174,15 +192,6 @@ else{
 var url = so + str + "";
 window.open (url, "newwindow");
 }
-</script>
-
-<script>//作废！
-//document.onkeydown = function(){
-	//if (event.keyCode==13) { 
-		//alert("ok"); 
-		//openWin('baidu'); 
-	//} 
-//}//作废！
 </script>
 
 <form name="searchForm" id="searchForm" method="POST" target="_blank"> 
