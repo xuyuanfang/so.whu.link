@@ -10,7 +10,7 @@
 </head>
 
 <?php
-if(is_array($_POST)&&count($_POST)>0)//判断是否有POST参数 
+if(is_array($_POST)&&count($_POST)>0)//判断是否有Get参数 
 { 
 	if(!empty($_POST['input']) || !isset($_POST["input"]))//判断所需要的参数是否存在，isset用来检测变量是否设置，返回true or false 
 	{ 
@@ -20,6 +20,7 @@ if(is_array($_POST)&&count($_POST)>0)//判断是否有POST参数
 			echo "<meta http-equiv='Refresh' content='0;URL=$url'>"; 
 			exit;
 		}
+
 	}
 }
 ?>
@@ -69,7 +70,7 @@ else if (name == "bing_img"){
 	var so = "http://cn.bing.com/images/search?q=";
 }
 else if(name == "sogou_img"){
-	var so = "http://pic.sogou.com/pics?query=";
+	var so = "http://pic.sogou.com/pic/searchList.jsp?v=5&statref=index_form_1&keyword=";
 }
 else if(name == "360_img"){
 	var so = "http://image.so.com/i?q=";
@@ -318,6 +319,7 @@ openWin('baidu');
 			<div href="JavaScript:void(0)" onclick="openWin('whulib_scholar')" align="left"><img src=img/whulib.png height="22" width=auto ></div></th>
 			<tr>
 			</table>
+			<a href="request">WHU搜索导航——文献传递请求(FREE)</a>
 			</center>
 			
 		</section>
