@@ -73,7 +73,7 @@ else if(name == "google_web"){
 	var so = "https://www.google.com.hk/search?q=";
 }
 else if(name == "google_mirror_web"){
-	var so = "https://ss.wtf/#safe=strict&q=";
+	var so = "https://g.starmoe.xyz/#q=";
 }
 
 //img
@@ -146,7 +146,7 @@ else if(name == "google_scholar"){
 	var so = "https://scholar.google.com.hk/scholar?q=";
 }
 else if(name == "google_mirror_scholar"){
-	var so = "https://g.sxisa.org/scholar?hl=zh-CN&q=";
+	var so = "https://fq.yanke.info/scholar?hl=zh-CN&q=";
 }
 else if(name == "luojia_scholar"){
 	var so = "http://cn.whu.findplus.cn/?h=search_list&action[addexpander][]=fulltext&query=";
