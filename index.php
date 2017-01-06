@@ -73,7 +73,11 @@ else if(name == "google_web"){
 	var so = "https://www.google.com.hk/search?q=";
 }
 else if(name == "google_mirror_web"){
-	var so = "https://g.starmoe.xyz/#q=";
+	if(!str==''){
+		var so = "https://g.starmoe.xyz/#q=";
+	}else{
+		var so = "https://g.starmoe.xyz";
+	}
 }
 
 //img
