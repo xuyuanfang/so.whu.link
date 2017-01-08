@@ -22,7 +22,10 @@ if(is_array($_POST)&&count($_POST)>0)//判断是否有POST参数
 ?>
 
 <body>
-<div align="center"><a href="http://so.whu.link" title=""><img src=img/logo.png height="50" width=auto ></a></div>
+<iframe name="weather_inc" src="http://i.tianqi.com/index.php?c=code&id=10" width="300" height="25" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" ></iframe>
+<br/>
+<br/>
+<div align="center"><a href="http://so.whu.link" title=""><img src=img/logo.png height="60" width=auto ></a></div>
 
 <?php
 //print_r($_SERVER);
