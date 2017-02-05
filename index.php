@@ -77,9 +77,9 @@ else if(name == "google_web"){
 }
 else if(name == "google_mirror_web"){
 	if(!str==''){
-		var so = "https://g.starmoe.xyz/#q=";
+		var so = "https://google.tse.moe/#q=";
 	}else{
-		var so = "https://g.starmoe.xyz";
+		var so = "https://google.tse.moe/";
 	}
 }
 
@@ -153,10 +153,18 @@ else if(name == "google_scholar"){
 	var so = "https://scholar.google.com.hk/scholar?q=";
 }
 else if(name == "google_mirror_scholar"){
-	var so = "https://fq.yanke.info/scholar?hl=zh-CN&q=";
+	if(!str==''){
+	var so = "https://gooabc.xyz/scholar?hl=zh-CN&q=";
+}else{
+	var so = "https://gooabc.xyz/scholar/schhp?hl=zh-CN";
+}
 }
 else if(name == "luojia_scholar"){
-	var so = "http://cn.whu.findplus.cn/?h=search_list&action[addexpander][]=fulltext&query=";
+	if(!str==''){
+		var so = "http://cn.whu.findplus.cn/?h=search_list&action[addexpander][]=fulltext&query=";
+	}else{
+		var so = "http://cn.whu.findplus.cn";
+	}
 }
 else if(name == "whulib_scholar"){
 	var so = "http://202.114.65.38:8080/search?xc=3&filed=wrd&app=null&base=whu01&kw=";
@@ -180,7 +188,7 @@ else if(name == "360_map"){
 	str = ""
 	var so = "http://ditu.so.com";
 }
-else if(name == "tencent__map"){
+else if(name == "tencent_map"){
 	str = ""
 	var so = "http://map.qq.com";
 }
