@@ -77,9 +77,9 @@ else if(name == "google_web"){
 }
 else if(name == "google_mirror_web"){
 	if(!str==''){
-		var so = "https://google.tse.moe/#q=";
+		var so = "https://gooabc.xyz/search?q=";
 	}else{
-		var so = "https://google.tse.moe/";
+		var so = "https://gooabc.xyz";
 	}
 }
 
