@@ -154,9 +154,9 @@ else if(name == "google_scholar"){
 }
 else if(name == "google_mirror_scholar"){
 	if(!str==''){
-	var so = "https://gooabc.xyz/scholar?hl=zh-CN&q=";
+	var so = "https://scholar-google-com-au.proxy.library.adelaide.edu.au/scholar?hl=zh-CN&q=";
 }else{
-	var so = "https://gooabc.xyz/scholar/schhp?hl=zh-CN";
+	var so = "https://scholar-google-com-au.proxy.library.adelaide.edu.au/schhp?hl=zh-CN";
 }
 }
 else if(name == "luojia_scholar"){
