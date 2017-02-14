@@ -77,9 +77,9 @@ else if(name == "google_web"){
 }
 else if(name == "google_mirror_web"){
 	if(!str==''){
-		var so = "https://gooabc.xyz/search?q=";
+		var so = "https://xue.glgoo.com/scholar?hl=zh-CN&q=";
 	}else{
-		var so = "https://gooabc.xyz";
+		var so = "https://xue.glgoo.com";
 	}
 }
 
