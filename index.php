@@ -173,32 +173,25 @@ else if(name == "whulib_scholar"){
 
 //map
 else if(name == "baidu_map"){
-	str = ""
-	var so = "http://map.baidu.com";
+	var so = "http://map.baidu.com/mobile/webapp/search/search/qt=s&wd=";
 }
 else if(name == "gaode_map"){
-	str = ""
-	var so = "http://ditu.amap.com";
+	var so = "http://ditu.amap.com/search?query=";
 }
 else if(name == "sogou_map"){
-	str = ""
-	var so = "http://map.sogou.com";
+	var so = "http://map.sogou.com/#lq=";
 }
 else if(name == "360_map"){
-	str = ""
-	var so = "http://ditu.so.com";
+	var so = "http://ditu.so.com/?t=map&k=";
 }
 else if(name == "tencent_map"){
-	str = ""
-	var so = "http://map.qq.com";
+	var so = "http://map.qq.com/?pid=more.map&w=";
 }
 else if (name == "bing_map"){
-	str = ""
-	var so = "http://cn.bing.com/ditu";
+	var so = "http://cn.bing.com/ditu/?q=";
 }
 else if(name == "google_map"){
-	str = ""
-	var so = "http://www.google.cn/maps";
+	var so = "http://www.google.cn/maps/search/";
 }
 else{
 	var so = "https://www.baidu.com/s?wd=";
@@ -370,7 +363,6 @@ window.open (url, "newwindow");
 			</tr>
 			</table>
 			</center>
-			<p>注意：地图无法从上方搜索框搜索，请直接点击logo进入地图页面查找！</p>
 		</section>
 	  </div>
 	</div>
