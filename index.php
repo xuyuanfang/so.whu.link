@@ -274,7 +274,7 @@ window.open (url, "newwindow");
 			<div href="JavaScript:void(0)" onclick="openWin('baidu_web')" align="left"><img src=img/baidu_web.png height="22" width=auto ></div></th>
 				<th><!--<h1>Bing</h1> -->
 			<div href="JavaScript:void(0)" onclick="openWin('bing_web')" align="left"><img src=img/bing.png height="22" width=auto ></div></th>
-			  </tr>
+			</tr>
 			<tr>
 				<th><!--<h1>sogou</h1> -->
 			<div href="JavaScript:void(0)" onclick="openWin('sogou_web')" align="left"><img src=img/sogou_web.png height="22" width=auto ></div></th>
@@ -298,7 +298,7 @@ window.open (url, "newwindow");
 			<div href="JavaScript:void(0)" onclick="openWin('baidu_img')" align="left"><img src=img/baidu_img.png height="22" width=auto ></div></th>
 				<th><!--<h1>Bing</h1> -->
 			<div href="JavaScript:void(0)" onclick="openWin('bing_img')" align="left"><img src=img/bing.png height="22" width=auto ></div></th>
-			  </tr>
+			</tr>
 			<tr>
 				<th><!--<h1>sogou</h1> -->
 			<div href="JavaScript:void(0)" onclick="openWin('sogou_img')" align="left"><img src=img/sogou_img.png height="22" width=auto ></div></th>
@@ -320,7 +320,7 @@ window.open (url, "newwindow");
 			<div href="JavaScript:void(0)" onclick="openWin('baidu_aq')" align="left"><img src=img/baidu_aq.png height="22" width=auto ></div></th>
 				<th><!--<h1>sogou</h1> -->
 			<div href="JavaScript:void(0)" onclick="openWin('sogou_aq')" align="left"><img src=img/sogou_aq.png height="22" width=auto ></div></th>
-			  </tr>
+			</tr>
 			<tr>
 				<th><!--<h1>360</h1> -->
 			<div href="JavaScript:void(0)" onclick="openWin('360_aq')" align="left"><img src=img/360_aq.png height="22" width=auto ></div></th>
@@ -343,7 +343,7 @@ window.open (url, "newwindow");
 			<div href="JavaScript:void(0)" onclick="openWin('baidu_translate')" align="left"><img src=img/baidu_translate.png height="22" width=auto ></div></th>
 				<th><!--<h1>Bing</h1> -->
 			<div href="JavaScript:void(0)" onclick="openWin('bing_translate')" align="left"><img src=img/bing.png height="22" width=auto ></div></th>
-			  </tr>
+			</tr>
 			<tr>
 				<th><!--<h1>有道</h1> -->
 			<div href="JavaScript:void(0)" onclick="openWin('youdao_translate')" align="left"><img src=img/youdao.png height="22" width=auto ></div></th>
@@ -367,7 +367,7 @@ window.open (url, "newwindow");
 			<div href="JavaScript:void(0)" onclick="openWin('baidu_scholar')" align="left"><img src=img/baidu_scholar.png height="22" width=auto ></div></th>
 				<th><!--<h1>Bing</h1> -->
 			<div href="JavaScript:void(0)" onclick="openWin('bing_scholar')" align="left"><img src=img/bing.png height="22" width=auto ></div></th>
-			  </tr>
+			</tr>
 			<tr>
 				<th><!--<h1>sogou</h1> -->
 			<div href="JavaScript:void(0)" onclick="openWin('sogou_scholar')" align="left"><img src=img/sogou_scholar.png height="22" width=auto ></div></th>
@@ -380,7 +380,7 @@ window.open (url, "newwindow");
 				<th><!--<h1>Google_mirror</h1> -->
 			<div href="JavaScript:void(0)" onclick="openWin('google_mirror_scholar')" align="left"><img src=img/google_mirror.png height="22" width=auto ></div></th>
 			</tr>
-			</tr>
+			<tr>
 				<th><!--<h1>luojia</h1> -->
 			<div href="JavaScript:void(0)" onclick="openWin('luojia_scholar')" align="left"><img src=img/luojia.png height="22" width=auto ></div></th>
 				<th><!--<h1>whulib</h1> -->
@@ -398,7 +398,7 @@ window.open (url, "newwindow");
 			<div href="JavaScript:void(0)" onclick="openWin('baidu_map')" align="left"><img src=img/baidu_map.png height="22" width=auto ></div></th>
 				<th><!--<h1>高德</h1> -->
 			<div href="JavaScript:void(0)" onclick="openWin('gaode_map')" align="left"><img src=img/gaode_map.png height="22" width=auto ></div></th>
-			  </tr>
+			</tr>
 			<tr>
 				<th><!--<h1>sogou</h1> -->
 			<div href="JavaScript:void(0)" onclick="openWin('sogou_map')" align="left"><img src=img/sogou_map.png height="22" width=auto ></div></th>
