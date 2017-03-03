@@ -44,6 +44,24 @@ if (stripos($_SERVER["HTTP_USER_AGENT"],"safari")){
 }
 }
 ?>
+<script language="javascript">
+var device_id = 0;
+var system ={
+win : false,
+mac : false,
+xll : false
+};
+
+var p = navigator.platform;
+system.win = p.indexOf("Win") == 0;
+system.mac = p.indexOf("Mac") == 0;
+system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+
+if(system.win||system.mac||system.xll){
+}else{
+device_id = 1;
+}
+</script> 
 
 <script>
 function read_input(){
@@ -77,9 +95,9 @@ else if(name == "google_web"){
 }
 else if(name == "google_mirror_web"){
 	if(!str==''){
-		var so = "https://xue.glgoo.com/scholar?hl=zh-CN&q=";
+		var so = "http://forgoogle.com/#q=";
 	}else{
-		var so = "https://xue.glgoo.com";
+		var so = "http://forgoogle.com";
 	}
 }
 
@@ -154,16 +172,25 @@ else if(name == "google_scholar"){
 }
 else if(name == "google_mirror_scholar"){
 	if(!str==''){
-	var so = "https://scholar-google-com-au.proxy.library.adelaide.edu.au/scholar?hl=zh-CN&q=";
+	var so = "https://g.hancel.net/scholar?hl=zh-CN&q=";
 }else{
-	var so = "https://scholar-google-com-au.proxy.library.adelaide.edu.au/schhp?hl=zh-CN";
+	var so = "https://g.hancel.net/scholar";
 }
 }
 else if(name == "luojia_scholar"){
-	if(!str==''){
-		var so = "http://cn.whu.findplus.cn/?h=search_list&action[addexpander][]=fulltext&query=";
-	}else{
-		var so = "http://cn.whu.findplus.cn";
+	if(device_id == 0){
+		if(!str==''){
+			var so = "http://cn.whu.findplus.cn/?h=search_list&action[addexpander][]=fulltext&query=";
+		}else{
+			var so = "http://cn.whu.findplus.cn";
+		}
+	}
+	else{
+		if(!str==''){
+			var so = "http://so.whu.link/lib/?query=";
+		}else{
+			var so = "http://so.whu.link/lib";
+		}
 	}
 }
 else if(name == "whulib_scholar"){
@@ -173,25 +200,53 @@ else if(name == "whulib_scholar"){
 
 //map
 else if(name == "baidu_map"){
-	var so = "http://map.baidu.com/mobile/webapp/search/search/qt=s&wd=";
+	if(!str==''){
+		var so = "http://map.baidu.com/mobile/webapp/search/search/qt=s&wd=";
+	}else{
+		var so = "http://map.baidu.com";
+	}
 }
 else if(name == "gaode_map"){
-	var so = "http://ditu.amap.com/search?query=";
+	if(!str==''){
+		var so = "http://ditu.amap.com/search?query=";
+	}else{
+		var so = "http://ditu.amap.com";
+	}
 }
 else if(name == "sogou_map"){
-	var so = "http://map.sogou.com/#lq=";
+	if(!str==''){
+		var so = "http://map.sogou.com/#lq=";
+	}else{
+		var so = "http://map.sogou.com";
+	}
 }
 else if(name == "360_map"){
-	var so = "http://ditu.so.com/?t=map&k=";
+	if(!str==''){
+		var so = "http://ditu.so.com/?t=map&k=";
+	}else{
+		var so = "http://ditu.so.com";
+	}
 }
 else if(name == "tencent_map"){
-	var so = "http://map.qq.com/?pid=more.map&w=";
+	if(!str==''){
+		var so = "http://map.qq.com/?pid=more.map&w=";
+	}else{
+		var so = "http://map.qq.com";
+	}
 }
 else if (name == "bing_map"){
-	var so = "http://cn.bing.com/ditu/?q=";
+	if(!str==''){
+		var so = "http://cn.bing.com/ditu/?q=";
+	}else{
+		var so = "http://cn.bing.com";
+	}
 }
 else if(name == "google_map"){
-	var so = "http://www.google.cn/maps/search/";
+	if(!str==''){
+		var so = "http://www.google.cn/maps/search/";
+	}else{
+		var so = "http://www.google.cn";
+	}
 }
 else{
 	var so = "https://www.baidu.com/s?wd=";
@@ -202,7 +257,7 @@ window.open (url, "newwindow");
 }
 </script>
 
-<form name="searchForm" id="searchForm" method="POST" target="_blank"> 
+<form name="searchForm" id="searchForm" method="post" target="_blank"> 
 <div class="searchbox" id="searchform">
 	<input type="text" value="" name="input" id="searchform" class="one" placeholder="请输入您想搜索的内容" />
 </div>
@@ -330,9 +385,7 @@ window.open (url, "newwindow");
 			<div href="JavaScript:void(0)" onclick="openWin('luojia_scholar')" align="left"><img src=img/luojia.png height="22" width=auto ></div></th>
 				<th><!--<h1>whulib</h1> -->
 			<div href="JavaScript:void(0)" onclick="openWin('whulib_scholar')" align="left"><img src=img/whulib.png height="22" width=auto ></div></th>
-			<tr>
 			</table>
-			<a href="request">WHU搜索导航——文献传递请求(FREE)</a>
 			</center>
 			
 		</section>
@@ -376,6 +429,6 @@ window.open (url, "newwindow");
 </script>
 
 <p>使用方法：在上方搜索框输入您想搜索的内容，然后点击下方您想要使用的搜索引擎的logo即可搜索,输入内容后直接回车默认使用百度搜索网页</p>
-<center><p>Copyright©2016 so.whu.link 鄂ICP备14003738号 版权所有 All Rights Reserved Powered By <a href="http://blog.xyf.im" target="_blank">WHUER</a> 本项目已在<a href="https://github.com/xuyuanfang/so.whu.link" target="_blank">Github</a>开源</p></center>
+<center><p>Copyright©2016-2017 so.whu.link 鄂ICP备14003738号 版权所有 All Rights Reserved Powered By <a href="http://blog.xyf.im" target="_blank">WHUER</a> 本项目已在<a href="https://github.com/xuyuanfang/so.whu.link" target="_blank">Github</a>开源</p></center>
 </body>
 </html>
