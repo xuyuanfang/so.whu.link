@@ -385,6 +385,7 @@ window.open (url, "newwindow");
 			<div href="JavaScript:void(0)" onclick="openWin('luojia_scholar')" align="left"><img src=img/luojia.png height="22" width=auto ></div></th>
 				<th><!--<h1>whulib</h1> -->
 			<div href="JavaScript:void(0)" onclick="openWin('whulib_scholar')" align="left"><img src=img/whulib.png height="22" width=auto ></div></th>
+			</tr>
 			</table>
 			</center>
 			
