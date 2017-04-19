@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color:#FFFFF0;
+  background-color:#FFFFFF;
 }
 
 p {padding:1em;color:#1ABC9C;}
@@ -25,7 +25,7 @@ p {padding:1em;color:#1ABC9C;}
   flex:1;
   padding:0.6em;
   border:0.2em solid rgb(26, 188, 156);
-
+}
 /* =================
    Container Styling */
 .container {
